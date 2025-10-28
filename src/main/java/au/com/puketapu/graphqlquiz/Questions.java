@@ -1,0 +1,23 @@
+package au.com.puketapu.graphqlquiz;
+
+/*
+ * _id: ID!
+    "The Question category."
+    category: String!
+    "The correct answer"
+    correct_answer: String!
+    "The question difficulty"
+    difficulty: String!
+    "list incorrect answers"
+    incorrect_answers: [String]
+    "Question text"
+    question: String!
+    "Question type"
+    type: String!
+ * 
+ */
+
+public record Questions(String _id, String category, String correct_answer,
+                        String difficulty, String[] incorrect_answers, String question,
+                        String type) {
+}
