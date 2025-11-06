@@ -16,7 +16,6 @@ public class QuestionsController {
     @Autowired
 	private QuestionsRepository repository;
     
-    @QueryMapping
     public List<Questions> getByCategory(@Argument String category) {
         return repository.findByCategory(category);
     }
