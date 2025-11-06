@@ -5,8 +5,8 @@ schema {
 questions queries
 """
 type Query {
-    getByCategory(category: String): [Questions]
-    getByCategoryDifficulty(category: String, difficulty: String): [Questions]
+    findByCategory(category: String): [Questions]
+    findByCategoryDifficulty(category: String, difficulty: String): [Questions]
 }
 """
 Questions
