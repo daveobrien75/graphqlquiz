@@ -1,6 +1,8 @@
-package au.com.puketapu.graphqlquiz;
+package au.com.puketapu.graphqlquiz.respository;
 
 import java.util.List;
+
+import au.com.puketapu.graphqlquiz.Questions;
 
 public interface CustomQuestionRepository {
 

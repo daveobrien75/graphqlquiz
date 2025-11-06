@@ -1,10 +1,13 @@
+schema {
+    query: Query
+}
 """
-category query
+questions queries
 """
 type Query {
-    questionsByCategory(category: String): [Questions]
+    getByCategory(category: String): [Questions]
+    getByCategoryDifficulty(category: String, difficulty: String): [Questions]
 }
-
 """
 Questions
 """

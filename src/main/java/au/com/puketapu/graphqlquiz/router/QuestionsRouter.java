@@ -1,4 +1,4 @@
-package au.com.puketapu.graphqlquiz;
+package au.com.puketapu.graphqlquiz.router;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -7,15 +7,15 @@ import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.RouterFunctions;
 import org.springframework.web.reactive.function.server.ServerResponse;
 
+import au.com.puketapu.graphqlquiz.handler.QuestionsHandler;
+
 import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
 import static org.springframework.web.reactive.function.server.RequestPredicates.accept;
-
 
 @Configuration(proxyBeanMethods = false)
 public class QuestionsRouter {
     @Bean
 	public RouterFunction<ServerResponse> route(QuestionsHandler questionsHandler) {
-
 		return RouterFunctions.route(GET("/quizquestions")
 					.and(accept(MediaType.APPLICATION_JSON)), questionsHandler::quizquestions)
 				.andRoute(GET("/categoryquestions")

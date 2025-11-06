@@ -1,4 +1,4 @@
-package au.com.puketapu.graphqlquiz;
+package au.com.puketapu.graphqlquiz.handler;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -7,6 +7,7 @@ import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 
+import au.com.puketapu.graphqlquiz.respository.QuestionsRepository;
 import reactor.core.publisher.Mono;
 
 @Component
